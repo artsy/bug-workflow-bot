@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 // Require the Bolt package (github.com/slackapi/bolt)
 const { App } = require("@slack/bolt");
 
@@ -8,13 +10,21 @@ const app = new App({
 
 // Listen to messages in the channel containing
 app.message(/(bug|issue|reproduce|complain|replicate)/i, async ({ message, say, context }) => {
+  
+  if (message.thread_ts && message.thread_ts !== message.ts) {
+    // Ignore thread messages
+    return;
+  }
+
   if (/feedback/i.test(message.text)) {
     // If it contains "feedback", do nothing
     return;
   }
+    
   try {
     // Reply to the message in a thread
     await say({
+      text: 'It looks like you mentioned a bug. Use the Product Bugs Report workflow instead.',
       thread_ts: message.ts,
       blocks: [
         {

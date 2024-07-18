@@ -4,12 +4,19 @@
   "description": "This bot helps improve Artsy’s Slack Product Bug Report workflow. It nudges users to use the Product Bugs Report Slack workflow when reporting bugs in the instead of just sending plain messages.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "ngrok": "ngrok http 3000"
   },
   "dependencies": {
-    "@slack/bolt": "^2.7.0"
+    "@slack/bolt": "^3.19.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "ngrok": "^4.3.3",
+    "nodemon": "^3.1.4"
   },
   "engines": {
-    "node": ">=12.13.0"
+    "node": "^20.x"
   }
 }
