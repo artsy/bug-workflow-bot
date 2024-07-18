@@ -24,14 +24,14 @@ app.message(/(bug|issue|reproduce|complain|replicate)/i, async ({ message, say, 
   try {
     // Reply to the message in a thread
     await say({
-      text: 'It looks like you mentioned a bug. Use the Product Bugs Report workflow instead.',
+      text: 'Oops, it seems you found a bug 🐞! Please use the Product Bugs Report workflow. Thanks! 🙌',
       thread_ts: message.ts,
       blocks: [
         {
           type: 'section',
           text: {
             type: 'mrkdwn',
-            text: 'It looks like you mentioned a bug. Use the Product Bugs Report workflow instead.'
+            text: 'Oops, it seems you found a bug 🐞! Please use the Product Bugs Report workflow. Thanks! 🙌'
           },
         },
         {
