@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "This bot helps improve Artsy’s Slack Product Bug Report workflow. It nudges users to use the Product Bugs Report Slack workflow when reporting bugs in the instead of just sending plain messages.",
   "main": "app.js",
+  "license": "MIT",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
