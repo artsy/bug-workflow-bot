@@ -1,0 +1,15 @@
+{
+  "name": "product-bugs-report-workflow-bot",
+  "version": "0.0.1",
+  "description": "This bot helps improve Artsy’s Slack Product Bug Report workflow. It nudges users to use the Product Bugs Report Slack workflow when reporting bugs in the instead of just sending plain messages.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@slack/bolt": "^2.7.0"
+  },
+  "engines": {
+    "node": ">=12.13.0"
+  }
+}
